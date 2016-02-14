@@ -139,7 +139,9 @@ public class Home extends AppCompatActivity {
                         if (doesTableExist(new_table_name)) {
                             dialog.cancel();
                             showSnackBar("Error! Table name already exists");
-                            dialog.cancel();
+                            //dialog.cancel();
+                        } else if (!new_table_name.matches("[a-zA-Z ]+")) {
+                            showSnackBar("Error! No special characters allowed");
                         } else {
                             //db.execSQL(command);
                             //showSnackBar("Creating table. Please Wait");

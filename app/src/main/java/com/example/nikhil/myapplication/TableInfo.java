@@ -16,6 +16,7 @@ import org.w3c.dom.Text;
 public class TableInfo extends AppCompatActivity {
 
     String table_name;
+    public final static String shareable_table_name = "shared";
     String database = "database";
 
 
@@ -78,7 +79,20 @@ public class TableInfo extends AppCompatActivity {
             Shiteee yeah
          */
     }
+    /*
+        Listeners for the buttons
+     */
     public void view_table(View v){
+        Intent intent = new Intent(getApplicationContext(), View_table.class);
+        intent.putExtra(shareable_table_name, table_name);
+        startActivity(intent);
+    }
+    public void insert_values(View v){
+        Intent intent = new Intent(getApplicationContext(), EnterValue.class);
+        intent.putExtra(shareable_table_name, table_name);
+        startActivity(intent);
+    }
+    public void export_table(View v){
 
     }
 

@@ -142,6 +142,11 @@ public class MainActivity extends AppCompatActivity {
                     return false;
 
                 }
+                else if(!editText.getText().toString().matches("[a-zA-Z ]+")){
+                    Snackbar.make(layout, "ERROR! No special characters!", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+                    return false;
+                }
             }
             //if no error. Proceed to create Table
             String[] all_columns = new String[list.size()];

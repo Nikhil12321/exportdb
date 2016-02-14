@@ -11,9 +11,7 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".EnterValue"
             android:label="@string/title_activity_enter_value"
@@ -31,7 +29,11 @@
         <activity
             android:name=".TableInfo"
             android:label="@string/title_activity_table_info"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".View_table"
+            android:label="@string/title_activity_view_table"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
