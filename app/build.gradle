@@ -26,4 +26,5 @@ dependencies {
     compile 'com.android.support:design:23.1.1'
     compile 'com.github.satyan:sugar:1.4'
     compile 'com.github.gabrielemariotti.cards:cardslib-core:2.1.0'
+    compile 'net.sf.opencsv:opencsv:2.3'
 }

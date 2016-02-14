@@ -6,4 +6,5 @@
     <string name="title_activity_table_info">TableInfo</string>
     <string name="title_activity_view_table">View_table</string>
     <string name="title_activity_insert_values">InsertValues</string>
+    <string name="title_activity_export_csv">ExportCSV</string>
 </resources>

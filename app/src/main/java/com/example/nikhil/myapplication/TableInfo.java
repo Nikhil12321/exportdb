@@ -93,7 +93,9 @@ public class TableInfo extends AppCompatActivity {
         startActivity(intent);
     }
     public void export_table(View v){
-
+        Intent intent = new Intent(getApplicationContext(), ExportCSV.class);
+        intent.putExtra(shareable_table_name, table_name);
+        startActivity(intent);
     }
 
 }
