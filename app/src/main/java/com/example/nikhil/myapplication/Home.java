@@ -86,7 +86,6 @@ public class Home extends AppCompatActivity {
             layoutParams.width = LinearLayout.LayoutParams.MATCH_PARENT;
             button.setLayoutParams(layoutParams);
             final Intent intent = new Intent(this, TableInfo.class);
-            //intent.putExtra();
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -120,16 +119,15 @@ public class Home extends AppCompatActivity {
 
         final SQLiteDatabase db = openOrCreateDatabase(database, MODE_PRIVATE, null);
         LayoutInflater layoutInflater = LayoutInflater.from(this);
-        /* add_table_dialog is the separate layout defined for the dialog
-
+        /*
+            add_table_dialog is the separate layout defined for the dialog
          */
         View promptView = layoutInflater.inflate(R.layout.add_table_dialog, null);
         AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
         alertBuilder.setView(promptView);
-        alertBuilder.setMessage(dialog_message)
-                .setTitle(dialog_message + "title");
-        /* add_table_edit_text is the editText field of the dialog
-
+        alertBuilder.setTitle(dialog_message);
+        /*
+            add_table_edit_text is the editText field of the dialog
          */
         final EditText input = (EditText)promptView.findViewById(R.id.add_table_edit_text);
 

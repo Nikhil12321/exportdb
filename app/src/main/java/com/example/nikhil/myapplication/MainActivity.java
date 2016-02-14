@@ -37,8 +37,8 @@ public class MainActivity extends AppCompatActivity {
     LinearLayout layout;
     String table_name;
     String shareable_intent_string = "shareable_table_name";
-    String add_table_to_index_query = "CREATE TABLE IF NOT EXITS TABLEINDEX (NAME VARCHAR, DATE VARCHAR)";
-    String insert_table_into_index = "INSERT INTO TABLEINDEX VALUES(";
+    String add_table_to_index_query = "CREATE TABLE IF NOT EXISTS TABLEINDEX(NAME VARCHAR UNIQUE, DATE VARCHAR);";
+    String insert_table_into_index = "INSERT INTO TABLEINDEX(NAME, DATE) VALUES(";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //USING VIEW.GONE INVISIBLE just makes it disappear, Gone also rearranges
+                //USING VIEW.GONE since INVISIBLE just makes it disappear, Gone also rearranges
                 editText.setVisibility(View.GONE);
                 //only good way to do it
                 list.remove(list.indexOf(id_editText));
@@ -162,13 +162,16 @@ public class MainActivity extends AppCompatActivity {
             Snackbar.make(layout, "Creating table. Please Wait", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show();
             /*
-            Create the index table
+                Create the index table
              */
             db.execSQL(add_table_to_index_query);
             /*
-            Insert into the index table
+                Insert into the index table.
+                You see i just realized. You need to insert values like VALUES('name', 'date');
+                So the shitty '' are important, enclosing the values.
+                WEEEEEEEEEIIIIIIRRDDD.
              */
-            String second_command = insert_table_into_index+table_name+", "+getDate()+");";
+            String second_command = insert_table_into_index+"'"+table_name+"'"+", "+"'"+getDate()+"'"+");";
             db.execSQL(second_command);
             //Start new activity
             Intent intent = new Intent(this, Home.class);
