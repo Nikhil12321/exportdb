@@ -5,10 +5,11 @@
 ## Add columns
 ![Add columns](https://github.com/Nikhil12321/exportdb/blob/master/app/src/main/res/drawable/2.png)
 
-[Do stuff with your table](https://github.com/Nikhil12321/exportdb/blob/master/app/src/main/res/drawable/3.png)
+## Do stuff
+![Do stuff with your table](https://github.com/Nikhil12321/exportdb/blob/master/app/src/main/res/drawable/3.png)
 
 ## Enter column values
-[Enter values](https://github.com/Nikhil12321/exportdb/blob/master/app/src/main/res/drawable/4.png)
+![Enter values](https://github.com/Nikhil12321/exportdb/blob/master/app/src/main/res/drawable/4.png)
 
 ## View your table
-[view](https://github.com/Nikhil12321/exportdb/blob/master/app/src/main/res/drawable/5.png)
+![view](https://github.com/Nikhil12321/exportdb/blob/master/app/src/main/res/drawable/5.png)
